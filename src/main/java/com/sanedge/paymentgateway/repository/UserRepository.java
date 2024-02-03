@@ -11,7 +11,9 @@ import com.sanedge.paymentgateway.models.User;
 public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByUsername(String username);
 
-    Optional<User> findById(Long userId);
+    Optional<User> findById(Long id);
 
     Optional<User> findByEmail(String email);
+
+    Optional<User> findByVerificationCode(String verificationCode);
 }

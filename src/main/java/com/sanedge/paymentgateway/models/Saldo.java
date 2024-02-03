@@ -1,5 +1,6 @@
 package com.sanedge.paymentgateway.models;
 
+import java.security.Timestamp;
 import java.util.Date;
 
 import jakarta.persistence.Column;
@@ -38,10 +39,10 @@ public class Saldo extends BaseModel {
   @Column(name = "total_balance", nullable = false)
   private Integer totalBalance;
 
-  @Column(name = "withdraw_amount", columnDefinition = "INTEGER DEFAULT 0")
+  @Column(name = "withdraw_amount", columnDefinition = "INTEGER DEFAULT 0", nullable = true)
   private Integer withdrawAmount;
 
-  @Column(name = "withdraw_time")
+  @Column(name = "withdraw_time", nullable = true)
   @Temporal(TemporalType.TIMESTAMP)
   private Date withdrawTime;
 
